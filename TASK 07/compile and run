@@ -1,0 +1,3 @@
+gcc q7.c -o q7
+ulimit -l
+./q7
