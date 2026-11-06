@@ -1,0 +1,7 @@
+gcc -c encryption.c -o encryption.o
+gcc bank.c encryption.o -o bank
+./bank
+
+gcc -fPIC -shared encryption.c -o libencrypt.so
+gcc runtime.c -o runtime -ldl
+LD_LIBRARY_PATH=. ./runtime
